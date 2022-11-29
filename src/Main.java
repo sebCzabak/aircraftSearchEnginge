@@ -4,11 +4,13 @@ public class Main {
     public static void main(String[] args) {
         FlightDatabase flightDB = new FlightDatabase();
 
-        flightDB.checkIfFlightExists("Berlin","Tokyo");
+        flightDB.checkIfFlightExists("Berlin", "Tokyo");
         System.out.println("=====");
         flightDB.displayFlightsFromCity("Paris");
         System.out.println("=====");
         flightDB.displayFlightToCity("Berlin");
+        System.out.println("=====");
+        //flightDB.getCities();
     }
 }
     class Flight{
@@ -84,15 +86,15 @@ public class Main {
             ArrayList<Flight>results=getFlightsToCity(city);
             displayFlights(results);
         }
-        public ArrayList<Flight>getCities(String city){
-            ArrayList<Flight>results = new ArrayList<>();
-            for(Flight flight :this.flights){
-                if(city.contains(results)){
-                    results.add(flight);
-                }
-            }
-            return results;
-        }
+//        public ArrayList<Flight>getCities(ArrayList<Flight>results){
+//            ArrayList<Flight>result = new ArrayList<>();
+//            for(Flight flight :this.flights){
+//                if(re.contains(results)){
+//                    result.add(flight);
+//                }
+//            }
+//            return result;
+//        }
 
 }
 
